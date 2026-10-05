@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ky" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[МУГАЛИМДИН АТЫ] — Мугалимдин портфолиосу</title>
+<meta name="description" content="[МУГАЛИМДИН АТЫ] — тажрыйбалуу мугалим. Тажрыйба, жетишкендиктер, сабактар жана байланыш.">
+<meta name="keywords" content="мугалим, портфолио, Кыргызстан, билим берүү, математика, информатика">
+<meta property="og:type" content="website">
+<meta property="og:title" content="[МУГАЛИМДИН АТЫ] — Мугалимдин портфолиосу">
+<meta property="og:description" content="Билим берүү — келечекти өзгөртүүнүн эң күчтүү жолу.">
+<meta property="og:image" content="images/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f2547;--navy2:#1b3a6b;--gold:#c9a24b;--sky:#4a90c2;--bg:#fff;--bg2:#f3f6fb;--text:#16233b;--muted:#4f5d75;--card:#fff;--line:#dfe6f0;--shadow:0 12px 32px rgba(15,37,71,.10);--r:16px;--s:8px;--h:72px}
+[data-theme=dark]{--bg:#0b1426;--bg2:#101c34;--text:#eaf0fa;--muted:#a9b6cc;--card:#14233f;--line:#25365a;--shadow:0 12px 32px rgba(0,0,0,.4);--navy:#e9c776}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--h)}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;transition:background .3s,color .3s}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.skip{position:absolute;left:-999px;background:var(--gold);color:#000;padding:8px 16px;z-index:200}.skip:focus{left:8px;top:8px}
+.container{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{line-height:1.2;color:var(--navy)}
+h1{font-size:clamp(2rem,5.2vw,3.7rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;margin-bottom:calc(var(--s)*5)}
+h3{font-size:1.15rem;margin-bottom:var(--s)}
+.section{padding:calc(var(--s)*12) 0}.alt{background:var(--bg2)}
+
+.header{position:sticky;top:0;z-index:100;height:var(--h);background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(14px);transition:box-shadow .3s}
+.header.scrolled{box-shadow:0 4px 24px rgba(15,37,71,.12)}
+.nav{display:flex;align-items:center;gap:var(--s);height:var(--h)}
+.logo{font-weight:800;color:var(--navy);margin-right:auto;font-size:1.05rem}
+.menu{display:flex;gap:4px}
+.menu a{padding:8px 12px;border-radius:999px;font-size:.92rem;font-weight:600;color:var(--muted);transition:.2s}
+.menu a:hover,.menu a.active{background:var(--bg2);color:var(--text);box-shadow:inset 0 -2px 0 var(--gold)}
+.icon-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;font-size:1.1rem;transition:transform .2s}
+.icon-btn:hover{transform:scale(1.08)}.burger{display:none}
+
+.hero{padding:calc(var(--s)*9) 0 calc(var(--s)*8);position:relative;overflow:hidden;background:radial-gradient(900px 500px at 85% 0,rgba(74,144,194,.18),transparent 60%),radial-gradient(600px 400px at 0 100%,rgba(201,162,75,.14),transparent 60%)}
+.hero::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;border:2px dashed var(--line);right:-120px;top:-100px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:calc(var(--s)*8);align-items:center;position:relative}
+.hello{font-weight:700;color:var(--sky);margin-bottom:calc(var(--s)*2)}
+.lead{color:var(--muted);font-size:1.1rem;max-width:56ch;margin:calc(var(--s)*3) 0}
+.btns{display:flex;flex-wrap:wrap;gap:calc(var(--s)*1.5)}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:700;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:linear-gradient(135deg,#0f2547,#1b3a6b);color:#fff;box-shadow:0 10px 24px rgba(15,37,71,.3)}
+[data-theme=dark] .primary{background:linear-gradient(135deg,#c9a24b,#e9c776);color:#0b1426}
+.ghost{border-color:var(--navy2);color:var(--text)}.ghost:hover{background:var(--bg2)}
+.portrait{position:relative;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:6/7;background:linear-gradient(160deg,var(--navy2),var(--sky));max-width:420px;justify-self:center;width:100%}
+.portrait img,.ph{width:100%;height:100%;object-fit:cover}
+.ph{display:grid;place-items:center;font-size:4rem;font-weight:800;color:#fff}
+.chip{position:absolute;left:16px;bottom:16px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.75);backdrop-filter:blur(10px);color:#0f2547;font-weight:700;font-size:.9rem}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s);margin-top:calc(var(--s)*7);border-top:1px solid var(--line);padding-top:calc(var(--s)*4);position:relative}
+.stats b{display:block;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--navy)}
+.stats span{color:var(--muted);font-size:.92rem}
+
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:calc(var(--s)*5)}
+.bio p{color:var(--muted);margin-bottom:calc(var(--s)*2);max-width:62ch}
+.profile{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:calc(var(--s)*3);box-shadow:var(--shadow)}
+.profile div{display:flex;justify-content:space-between;gap:var(--s);padding:12px 0;border-bottom:1px solid var(--line)}
+.profile div:last-child{border:0}
+dt{color:var(--muted)}dd{font-weight:700;text-align:right}
+
+.timeline{list-style:none;padding:0 0 0 32px;border-left:2px solid var(--gold);display:grid;gap:calc(var(--s)*4)}
+.timeline li{position:relative}
+.timeline li::before{content:"";position:absolute;left:-41px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px var(--bg2)}
+.timeline time{color:var(--sky);font-weight:700}
+.timeline p{color:var(--muted);max-width:60ch}
+
+.grid{display:grid;gap:calc(var(--s)*3)}
+.cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:calc(var(--s)*3);box-shadow:var(--shadow);transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.card p{color:var(--muted)}
+.ico{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--bg2);font-size:1.6rem;margin-bottom:calc(var(--s)*2)}
+.tag{display:inline-block;margin-top:calc(var(--s)*2);padding:4px 12px;border-radius:999px;background:rgba(201,162,75,.18);font-size:.85rem;font-weight:600}
+.stars{color:var(--gold);letter-spacing:2px;margin-bottom:var(--s)}
+blockquote footer{display:flex;align-items:center;gap:12px;margin-top:calc(var(--s)*2)}
+blockquote small{display:block;color:var(--muted)}
+.avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--navy2);color:#fff;font-weight:800}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:calc(var(--s)*2)}
+.g-item{padding:0;border:0;border-radius:var(--r);overflow:hidden;cursor:zoom-in;aspect-ratio:4/3;background:var(--bg2);box-shadow:var(--shadow)}
+.g-item:nth-child(1),.g-item:nth-child(4){aspect-ratio:4/4}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.g-item:hover img{transform:scale(1.06)}
+.lightbox{position:fixed;inset:0;z-index:300;background:rgba(5,12,28,.92);display:grid;place-items:center;align-content:center;gap:12px;padding:24px}
+.lightbox[hidden]{display:none}
+.lightbox img{max-height:78vh;border-radius:12px}.lightbox p{color:#fff;font-weight:600}
+.lb-close{position:absolute;top:16px;right:16px}
+
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:calc(var(--s)*6)}
+.contacts{list-style:none;padding:0;display:grid;gap:calc(var(--s)*2)}
+.contacts b{display:block;color:var(--muted);font-size:.9rem}
+.contacts a:hover{color:var(--sky)}
+.form{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:calc(var(--s)*4);box-shadow:var(--shadow);display:grid;gap:calc(var(--s)*2)}
+label{font-weight:600;display:grid;gap:6px}
+input,textarea{font:inherit;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--text);width:100%}
+input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#d33}
+.err{color:#d33;min-height:1em;font-weight:500}
+.ok{color:#198754;font-weight:600}
+
+.footer{background:#0b1830;color:#dbe4f3;padding:calc(var(--s)*7) 0 calc(var(--s)*3)}
+.foot{display:grid;grid-template-columns:1.3fr 1fr auto;gap:calc(var(--s)*4);align-items:start}
+.foot nav{display:grid;gap:6px}.foot a:hover{color:var(--gold)}
+.social{display:flex;gap:8px}.social a{width:40px;height:40px;border-radius:50%;border:1px solid #3a4d73;display:grid;place-items:center;font-size:.8rem;font-weight:700}
+.copy{text-align:center;margin-top:calc(var(--s)*5);font-size:.9rem;color:#9fb0cc}
+.to-top{position:fixed;right:20px;bottom:20px;width:48px;height:48px;border-radius:50%;border:0;background:var(--gold);color:#0b1426;font-size:1.3rem;cursor:pointer;box-shadow:var(--shadow);z-index:90}
+.to-top[hidden]{display:none}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
+
+@media (max-width:1024px){.menu a{padding:8px 8px;font-size:.85rem}}
+@media (max-width:900px){
+.burger{display:block}
+.menu{position:fixed;inset:var(--h) 0 auto 0;flex-direction:column;background:var(--bg);padding:16px 20px 24px;border-bottom:1px solid var(--line);box-shadow:var(--shadow);transform:translateY(-120%);transition:transform .3s;visibility:hidden}
+.menu.open{transform:none;visibility:visible}
+.menu a{padding:12px;font-size:1rem}
+.hero-grid,.about-grid,.contact-grid,.foot{grid-template-columns:1fr}
+.stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:360px){.btn{width:100%;text-align:center}.logo{font-size:.9rem}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Мазмунга өтүү</a>
+
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="#home" class="logo">[МУГАЛИМДИН АТЫ]</a>
+    <nav id="menu" class="menu" aria-label="Негизги меню">
+      <a href="#home">Башкы бет</a><a href="#about">Мен жөнүндө</a><a href="#experience">Тажрыйба</a>
+      <a href="#achievements">Жетишкендиктер</a><a href="#subjects">Сабактар</a><a href="#gallery">Галерея</a>
+      <a href="#testimonials">Пикирлер</a><a href="#contact">Байланыш</a>
+    </nav>
+    <button class="icon-btn" id="themeToggle" aria-label="Түнкү режимге которуу">🌙</button>
+    <button class="icon-btn burger" id="burger" aria-label="Менюну ачуу" aria-expanded="false" aria-controls="menu">☰</button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <p class="hello">Саламатсызбы! Менин атым — [МУГАЛИМДИН АТЫ]</p>
+      <h1>Билим берүү — келечекти өзгөртүүнүн эң күчтүү жолу.</h1>
+      <p class="lead">Мен — окуучулардын билим алуусуна, чыгармачылык жөндөмүн өнүктүрүүгө жана өз потенциалын ачууга жардам берген тажрыйбалуу мугалиммин.</p>
+      <div class="btns"><a class="btn primary" href="#about">Мен жөнүндө</a><a class="btn ghost" href="#contact">Байланышуу</a></div>
+    </div>
+    <figure class="portrait">
+      <img src="images/teacher.jpg" alt="[МУГАЛИМДИН АТЫ] — мугалимдин сүрөтү" width="480" height="560" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',textContent:'МА',ariaLabel:'Сүрөттүн ордун'}))">
+      <figcaption class="chip">[САБАКТЫН АТЫ] мугалими</figcaption>
+    </figure>
+  </div>
+  <div class="container stats">
+    <div><b data-count="10" data-suffix="+">0</b><span>жылдык тажрыйба</span></div>
+    <div><b data-count="500" data-suffix="+">0</b><span>окуучу</span></div>
+    <div><b data-count="30" data-suffix="+">0</b><span>жетишкендик</span></div>
+    <div><b data-count="95" data-suffix="%">0</b><span>позитивдүү пикир</span></div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <h2>Мен жөнүндө</h2>
+    <div class="about-grid">
+      <div class="bio">
+        <p>Мен окуучуларга билимди жүктөө эмес, ойлонууну үйрөтүүнү максат кылам. Ар бир баланын өз темпи жана өз кызыкчылыгы бар деп эсептейм, ошон үчүн сабакты практика, суроо жана биргелешкен долбоорлор аркылуу курам.</p>
+        <p>Жылдар бою заманбап методикаларды, санариптик куралдарды жана автордук тапшырмаларды колдонуп, окуучулардын олимпиадаларда жана экзамендерде жогорку жыйынтык көрсөтүшүнө жетиштим.</p>
+      </div>
+      <dl class="profile">
+        <div><dt>Аты-жөнү</dt><dd>[МУГАЛИМДИН АТЫ]</dd></div>
+        <div><dt>Кесиби</dt><dd>Мугалим</dd></div>
+        <div><dt>Адистиги</dt><dd>[САБАКТЫН АТЫ]</dd></div>
+        <div><dt>Билими</dt><dd>[УНИВЕРСИТЕТ], жогорку билим</dd></div>
+        <div><dt>Мектеп</dt><dd>[МЕКТЕПТИН АТЫ]</dd></div>
+        <div><dt>Стаж</dt><dd>10+ жыл</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="experience">
+  <div class="container">
+    <h2>Педагогикалык тажрыйба</h2>
+    <ol class="timeline">
+      <li><time>2015 — 2018</time><h3>Мугалим</h3><p>Сабак берүүнүн негизги методикаларын өздөштүрүп, класс жетекчилигин жүргүздүм.</p></li>
+      <li><time>2018 — 2022</time><h3>Улук мугалим</h3><p>Олимпиадага даярдоо тобун жетектеп, жаш мугалимдерге колдоо көрсөттүм.</p></li>
+      <li><time>2022 — азыркы учур</time><h3>Методист / мугалим</h3><p>Автордук материалдарды түзүп, семинарларды өткөрүп, мектептин окуу программасын өнүктүрөм.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="achievements">
+  <div class="container">
+    <h2>Жетишкендиктер</h2>
+    <div class="grid cards">
+      <article class="card"><span class="ico">🏆</span><h3>Жылдын мыкты мугалими</h3><p>[ЖЫЛ] — район деңгээлиндеги сынак.</p></article>
+      <article class="card"><span class="ico">🥇</span><h3>Олимпиада жеңүүчүлөрү</h3><p>Окуучулар облустук жана республикалык байгелерди алышты.</p></article>
+      <article class="card"><span class="ico">📚</span><h3>Автордук методикалык иш</h3><p>Өз колдонмолорум жана тапшырмалар жыйнагы.</p></article>
+      <article class="card"><span class="ico">🎓</span><h3>Сертификаттар</h3><p>Квалификацияны жогорулатуу курстары.</p></article>
+      <article class="card"><span class="ico">🌟</span><h3>Ардак грамоталар</h3><p>Мектеп жана билим берүү бөлүмүнөн.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="subjects">
+  <div class="container">
+    <h2>Мен окуткан сабактар</h2>
+    <div class="grid cards">
+      <article class="card"><span class="ico">➗</span><h3>Математика</h3><p>Логика, эсептөө жана маселе чыгаруу.</p><span class="tag">5–11-класс</span></article>
+      <article class="card"><span class="ico">💻</span><h3>Информатика</h3><p>Алгоритм, программалоо жана санарип сабаттуулук.</p><span class="tag">7–11-класс</span></article>
+      <article class="card"><span class="ico">📖</span><h3>Кыргыз тили</h3><p>Туура сүйлөө, жазуу жана адабият.</p><span class="tag">5–11-класс</span></article>
+      <article class="card"><span class="ico">🌍</span><h3>Англис тили</h3><p>Сүйлөшүү, грамматика жана сынакка даярдык.</p><span class="tag">5–11-класс</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="container">
+    <h2>Галерея</h2>
+    <div class="gallery" id="gallery-grid">
+      <button class="g-item" data-label="Сабак учуру"><img src="images/g1.jpg" alt="Сабак учуру" loading="lazy" width="400" height="300"></button>
+      <button class="g-item" data-label="Окуучулар менен иштөө"><img src="images/g2.jpg" alt="Окуучулар менен иштөө" loading="lazy" width="400" height="300"></button>
+      <button class="g-item" data-label="Иш-чаралар"><img src="images/g3.jpg" alt="Иш-чаралар" loading="lazy" width="400" height="300"></button>
+      <button class="g-item" data-label="Олимпиадалар"><img src="images/g4.jpg" alt="Олимпиадалар" loading="lazy" width="400" height="300"></button>
+      <button class="g-item" data-label="Семинарлар"><img src="images/g5.jpg" alt="Семинарлар" loading="lazy" width="400" height="300"></button>
+      <button class="g-item" data-label="Сертификаттар"><img src="images/g6.jpg" alt="Сертификаттар" loading="lazy" width="400" height="300"></button>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="testimonials">
+  <div class="container">
+    <h2>Окуучулар жана ата-энелердин пикири</h2>
+    <div class="grid cards">
+      <blockquote class="card"><div class="stars" aria-label="5 жылдыздан 5">★★★★★</div><p>Сабактары абдан түшүнүктүү. Математиканы жактырып калдым.</p><footer><span class="avatar">А</span><div><b>[АТЫ]</b><small>Окуучу, 10-класс</small></div></footer></blockquote>
+      <blockquote class="card"><div class="stars" aria-label="5 жылдыздан 5">★★★★★</div><p>Балабыз олимпиадага даярданып, өзүнө ишеними пайда болду.</p><footer><span class="avatar">Б</span><div><b>[АТЫ]</b><small>Ата-эне</small></div></footer></blockquote>
+      <blockquote class="card"><div class="stars" aria-label="5 жылдыздан 5">★★★★★</div><p>Ар бир окуучуга жеке мамиле кылат. Рахмат!</p><footer><span class="avatar">С</span><div><b>[АТЫ]</b><small>Бүтүрүүчү</small></div></footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <h2>Байланыш</h2>
+      <ul class="contacts">
+        <li><b>Телефон</b><a href="tel:[ТЕЛЕФОН]">[ТЕЛЕФОН]</a></li>
+        <li><b>Email</b><a href="mailto:[EMAIL]">[EMAIL]</a></li>
+        <li><b>Дарек</b>[АДРЕС]</li>
+        <li><b>Мектеп</b>[МЕКТЕПТИН АТЫ]</li>
+        <li><b>Тармактар</b><a href="#" rel="noopener">Instagram</a> · <a href="#" rel="noopener">Telegram</a> · <a href="#" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+    <form id="form" class="form" novalidate>
+      <label>Аты-жөнү<input name="name" autocomplete="name" required><small class="err"></small></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required><small class="err"></small></label>
+      <label>Телефон<input name="phone" type="tel" autocomplete="tel"><small class="err"></small></label>
+      <label>Тема<input name="subject" required><small class="err"></small></label>
+      <label>Билдирүү<textarea name="message" rows="4" required></textarea><small class="err"></small></label>
+      <button class="btn primary" type="submit">Билдирүү жөнөтүү</button>
+      <p class="ok" id="formOk" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container foot">
+    <div><b>[МУГАЛИМДИН АТЫ]</b><p>Билим — ар бир баланын жарыгы.</p></div>
+    <nav aria-label="Футер меню"><a href="#about">Мен жөнүндө</a><a href="#achievements">Жетишкендиктер</a><a href="#subjects">Сабактар</a><a href="#contact">Байланыш</a></nav>
+    <div class="social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Telegram">TG</a><a href="#" aria-label="Facebook">FB</a></div>
+  </div>
+  <p class="copy">© <span id="year">2026</span> [МУГАЛИМДИН АТЫ]. Made with ❤️ for education</p>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Жогору чыгуу" hidden>↑</button>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Сүрөттү чоңойтуу" hidden>
+  <button class="icon-btn lb-close" id="lbClose" aria-label="Жабуу">✕</button>
+  <img id="lbImg" alt=""><p id="lbCap"></p>
+</div>
+<script>
+(() => {
+  'use strict';
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const root = document.documentElement;
+
+  // 10. Dark / light mode (saved in localStorage)
+  const themeBtn = $('#themeToggle');
+  const setTheme = t => {
+    root.dataset.theme = t;
+    themeBtn.textContent = t === 'dark' ? '☀️' : '🌙';
+    themeBtn.setAttribute('aria-label', t === 'dark' ? 'Жарык режимге которуу' : 'Түнкү режимге которуу');
+    try { localStorage.setItem('theme', t); } catch (e) {}
+  };
+  let saved = null;
+  try { saved = localStorage.getItem('theme'); } catch (e) {}
+  setTheme(saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+  themeBtn.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+
+  // 1. Mobile menu
+  const burger = $('#burger'), menu = $('#menu');
+  const toggleMenu = open => {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.textContent = open ? '✕' : '☰';
+  };
+  burger.addEventListener('click', () => toggleMenu(!menu.classList.contains('open')));
+  $$('a', menu).forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+  // 8. Header effect + 7. Back to top
+  const header = $('#header'), toTop = $('#toTop');
+  const onScroll = () => {
+    header.classList.toggle('scrolled', scrollY > 10);
+    toTop.hidden = scrollY < 600;
+  };
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // 3. Active navigation link
+  const links = $$('.menu a');
+  const spy = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  $$('main section[id]').forEach(s => spy.observe(s));
+
+  // 4. Scroll reveal
+  const rv = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); rv.unobserve(e.target); }
+  }), { threshold: .12 });
+  $$('.card, .timeline li, .profile, .bio, .g-item, .form, .contacts').forEach(el => { el.classList.add('reveal'); rv.observe(el); });
+
+  // 9. Counter animation
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const counter = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, end = +el.dataset.count, sfx = el.dataset.suffix || '';
+    counter.unobserve(el);
+    if (reduce) { el.textContent = end + sfx; return; }
+    const t0 = performance.now(), dur = 1400;
+    const tick = t => {
+      const p = Math.min((t - t0) / dur, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + sfx;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }), { threshold: .6 });
+  $$('[data-count]').forEach(el => counter.observe(el));
+
+  // 5. Gallery with placeholder fallback + lightbox
+  const colors = ['#1b3a6b', '#4a90c2', '#c9a24b', '#2a5d8f', '#0f2547', '#7a6a3a'];
+  const placeholder = (label, i) => 'data:image/svg+xml;utf8,' + encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><rect width="800" height="600" fill="${colors[i % 6]}"/><text x="400" y="310" fill="#fff" font-family="sans-serif" font-size="40" text-anchor="middle">${label}</text></svg>`);
+  const items = $$('.g-item');
+  items.forEach((b, i) => {
+    const img = $('img', b);
+    img.addEventListener('error', () => { img.src = placeholder(b.dataset.label, i); }, { once: true });
+  });
+  const lb = $('#lightbox'), lbImg = $('#lbImg'), lbCap = $('#lbCap'), lbClose = $('#lbClose');
+  let lastFocus = null;
+  const closeLb = () => { lb.hidden = true; document.body.style.overflow = ''; lastFocus && lastFocus.focus(); };
+  items.forEach(b => b.addEventListener('click', () => {
+    lastFocus = b;
+    lbImg.src = $('img', b).src; lbImg.alt = b.dataset.label; lbCap.textContent = b.dataset.label;
+    lb.hidden = false; document.body.style.overflow = 'hidden'; lbClose.focus();
+  }));
+  lbClose.addEventListener('click', closeLb);
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+  addEventListener('keydown', e => {
+    if (e.key === 'Escape') { if (!lb.hidden) closeLb(); toggleMenu(false); }
+  });
+
+  // 6. Form validation
+  const form = $('#form'), ok = $('#formOk');
+  const rules = {
+    name: v => v.trim().length >= 2 || 'Аты-жөнүңүздү жазыңыз (кеминде 2 тамга).',
+    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) || 'Email туура эмес. Мисалы: name@mail.com',
+    phone: v => !v || /^\+?[\d\s()-]{9,16}$/.test(v) || 'Телефон туура эмес. Мисалы: +996 555 123 456',
+    subject: v => v.trim().length >= 3 || 'Теманы жазыңыз.',
+    message: v => v.trim().length >= 10 || 'Билдирүү кеминде 10 тамгадан турушу керек.'
+  };
+  const check = f => {
+    const r = rules[f.name](f.value), err = f.parentElement.querySelector('.err');
+    f.setAttribute('aria-invalid', r !== true);
+    err.textContent = r === true ? '' : r;
+    return r === true;
+  };
+  $$('input, textarea', form).forEach(f => f.addEventListener('blur', () => check(f)));
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    ok.textContent = '';
+    const valid = $$('input, textarea', form).map(check).every(Boolean);
+    if (!valid) { $('[aria-invalid=true]', form).focus(); return; }
+    // Бул жерге чыныгы жөнөтүүнү кошуңуз (мисалы, Formspree же өз серверңиз).
+    ok.textContent = 'Рахмат! Билдирүүңүз кабыл алынды.';
+    form.reset();
+  });
+
+  $('#year').textContent = new Date().getFullYear();
+})();
+
+</script>
+</body>
+</html>
